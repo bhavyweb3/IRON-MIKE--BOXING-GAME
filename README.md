@@ -262,7 +262,13 @@ Some possible improvements for future versions include:
 * More game modes
 
 ---
+## Screenshots 
 
+<img width="1917" height="947" alt="IRONMIKE GAME-3" src="https://github.com/user-attachments/assets/a70c0cb4-9552-4408-a327-dad2e9e8e8bc" />
+<img width="1917" height="957" alt="IRONMIKE GAME-2" src="https://github.com/user-attachments/assets/06daecce-b278-4310-9126-9539a6be42c4" />
+<img width="1913" height="1007" alt="IRONMIKE GAME-1" src="https://github.com/user-attachments/assets/57aa0aab-0c97-415c-94eb-4c6f543e487f" />
+
+---
 ## 🥊 IRON MIKE
 
 > **Train. Fight. Improve.**
