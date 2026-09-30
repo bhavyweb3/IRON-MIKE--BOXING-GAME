@@ -1,0 +1,777 @@
+/* ===============================
+   BASIC SETTINGS
+   =============================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+
+    font-family: Arial, sans-serif;
+
+    background: #111;
+
+    color: white;
+
+    text-align: center;
+
+    min-height: 100vh;
+}
+
+
+.screen {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 20px;
+}
+
+
+.hidden {
+
+    display: none;
+}
+
+
+/* ===============================
+   HOME SCREEN
+   =============================== */
+
+#homeScreen {
+
+    background: linear-gradient(
+        135deg,
+        #111,
+        #2b0000
+    );
+}
+
+
+#homeScreen h1 {
+
+    font-size: 70px;
+
+    color: #e63946;
+
+    margin-bottom: 10px;
+
+    letter-spacing: 5px;
+}
+
+
+#homeScreen p {
+
+    font-size: 20px;
+
+    color: #ccc;
+
+    margin-bottom: 30px;
+}
+
+
+/* ===============================
+   BUTTONS
+   =============================== */
+
+button {
+
+    background: #e63946;
+
+    color: white;
+
+    border: none;
+
+    padding: 14px 25px;
+
+    margin: 8px;
+
+    border-radius: 6px;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+button:hover {
+
+    background: #ff4d5a;
+
+    transform: scale(1.05);
+}
+
+
+button:active {
+
+    transform: scale(0.95);
+}
+
+
+/* ===============================
+   GAME TITLE
+   =============================== */
+
+#gameScreen h1 {
+
+    color: #e63946;
+
+    margin-bottom: 5px;
+
+    letter-spacing: 3px;
+}
+
+
+/* ===============================
+   MODE
+   =============================== */
+
+#modeText {
+
+    color: #f1c40f;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    margin-bottom: 12px;
+}
+
+
+/* ===============================
+   TOP AREA
+   =============================== */
+
+.topArea {
+
+    width: 90%;
+
+    max-width: 1000px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 12px;
+}
+
+
+.fighterInfo {
+
+    width: 35%;
+}
+
+
+.fighterInfo h2 {
+
+    margin-bottom: 8px;
+
+    font-size: 18px;
+}
+
+
+/* ===============================
+   HEALTH
+   =============================== */
+
+.healthBar {
+
+    width: 100%;
+
+    height: 20px;
+
+    background: #333;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    border: 2px solid #555;
+}
+
+
+.health {
+
+    width: 100%;
+
+    height: 100%;
+
+    background: #2ecc71;
+
+    transition: width 0.3s ease;
+}
+
+
+/* ===============================
+   TIMER
+   =============================== */
+
+.timer {
+
+    width: 65px;
+
+    height: 65px;
+
+    border: 4px solid #e63946;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-size: 24px;
+
+    font-weight: bold;
+}
+
+
+/* ===============================
+   STAMINA
+   =============================== */
+
+.staminaArea {
+
+    width: 300px;
+
+    margin-bottom: 10px;
+
+    text-align: left;
+}
+
+
+.staminaArea span {
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    color: #ccc;
+}
+
+
+.staminaBar {
+
+    width: 100%;
+
+    height: 14px;
+
+    background: #333;
+
+    border-radius: 8px;
+
+    overflow: hidden;
+
+    margin-top: 4px;
+
+    border: 1px solid #555;
+}
+
+
+.stamina {
+
+    width: 100%;
+
+    height: 100%;
+
+    background: #3498db;
+
+    transition: width 0.2s ease;
+}
+
+
+/* ===============================
+   COMBO
+   =============================== */
+
+#combo {
+
+    min-height: 25px;
+
+    color: #f1c40f;
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    margin-bottom: 8px;
+}
+
+/* ===============================
+   FIGHT AREA
+   =============================== */
+
+.fightArea {
+
+    width: 90%;
+
+    max-width: 1000px;
+
+    height: 380px;
+
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.25),
+            rgba(0, 0, 0, 0.25)
+        ),
+        url("assets/images/ring.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-repeat: no-repeat;
+
+    border: 3px solid #444;
+
+    border-radius: 10px;
+
+    display: flex;
+
+    justify-content: space-around;
+
+    align-items: center;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+
+/* ===============================
+   VS
+   =============================== */
+
+.vs {
+
+    font-size: 35px;
+
+    font-weight: bold;
+
+    color: #e63946;
+}
+
+
+/* ===============================
+   BOXER
+   =============================== */
+
+.boxer {
+
+    width: 100px;
+
+    height: 220px;
+
+    position: relative;
+
+    transition: 0.2s;
+}
+
+
+/* ===============================
+   HEAD
+   =============================== */
+
+.head {
+
+    width: 60px;
+
+    height: 60px;
+
+    background: #d69b72;
+
+    border-radius: 50%;
+
+    position: absolute;
+
+    top: 0;
+
+    left: 20px;
+
+    border: 3px solid #222;
+}
+
+
+/* ===============================
+   BODY
+   =============================== */
+
+.body {
+
+    width: 65px;
+
+    height: 90px;
+
+    background: #e63946;
+
+    position: absolute;
+
+    top: 55px;
+
+    left: 17px;
+
+    border-radius: 15px;
+}
+
+
+.enemyBoxer .body {
+
+    background: #333;
+}
+
+
+/* ===============================
+   ARMS
+   =============================== */
+
+.arm {
+
+    width: 20px;
+
+    height: 80px;
+
+    background: #d69b72;
+
+    position: absolute;
+
+    top: 60px;
+
+    border-radius: 10px;
+}
+
+
+.leftArm {
+
+    left: 0;
+
+    transform: rotate(15deg);
+}
+
+
+.rightArm {
+
+    right: 0;
+
+    transform: rotate(-15deg);
+}
+
+
+/* ===============================
+   LEGS
+   =============================== */
+
+.leg {
+
+    width: 22px;
+
+    height: 80px;
+
+    background: #222;
+
+    position: absolute;
+
+    top: 140px;
+
+    border-radius: 10px;
+}
+
+
+.leftLeg {
+
+    left: 25px;
+
+    transform: rotate(5deg);
+}
+
+
+.rightLeg {
+
+    right: 25px;
+
+    transform: rotate(-5deg);
+}
+
+
+/* ===============================
+   PUNCH
+   =============================== */
+
+.playerBoxer.punchLeft {
+
+    animation: punchLeft 0.3s;
+}
+
+
+.playerBoxer.punchRight {
+
+    animation: punchRight 0.3s;
+}
+
+
+@keyframes punchLeft {
+
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(35px) rotate(-3deg);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+
+@keyframes punchRight {
+
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(35px) rotate(3deg);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+
+/* ===============================
+   ENEMY HIT
+   =============================== */
+
+.enemyBoxer.hit {
+
+    animation: enemyHit 0.3s;
+}
+
+
+@keyframes enemyHit {
+
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(20px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+
+/* ===============================
+   ENEMY PUNCH
+   =============================== */
+
+.enemyBoxer.enemyPunch {
+
+    animation: enemyPunch 0.3s;
+}
+
+
+@keyframes enemyPunch {
+
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(-35px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+
+/* ===============================
+   BLOCK
+   =============================== */
+
+.playerBoxer.blocking {
+
+    transform: scale(0.95);
+
+    filter: brightness(1.4);
+}
+
+
+/* ===============================
+   SCREEN SHAKE
+   =============================== */
+
+.shake {
+
+    animation: shake 0.2s;
+}
+
+
+@keyframes shake {
+
+    0% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-5px);
+    }
+
+    50% {
+        transform: translateX(5px);
+    }
+
+    75% {
+        transform: translateX(-5px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+
+/* ===============================
+   MESSAGE
+   =============================== */
+
+#message {
+
+    font-size: 24px;
+
+    font-weight: bold;
+
+    margin: 10px;
+
+    min-height: 30px;
+}
+
+
+/* ===============================
+   RESULT
+   =============================== */
+
+#resultTitle {
+
+    font-size: 55px;
+
+    color: #e63946;
+
+    margin-bottom: 15px;
+}
+
+
+#resultMessage {
+
+    color: #ccc;
+
+    font-size: 20px;
+
+    margin-bottom: 20px;
+}
+
+
+/* ===============================
+   EXIT BUTTON
+   =============================== */
+
+.homeButton {
+
+    background: #444;
+
+    margin-top: 5px;
+}
+
+
+.homeButton:hover {
+
+    background: #666;
+}
+
+
+/* ===============================
+   MOBILE
+   =============================== */
+
+@media (max-width: 700px) {
+
+    #homeScreen h1 {
+
+        font-size: 45px;
+    }
+
+
+    .fightArea {
+
+        height: 320px;
+    }
+
+
+    .boxer {
+
+        transform: scale(0.75);
+    }
+
+
+    .fighterInfo {
+
+        width: 30%;
+    }
+
+
+    .fighterInfo h2 {
+
+        font-size: 14px;
+    }
+
+
+    .timer {
+
+        width: 55px;
+
+        height: 55px;
+
+        font-size: 20px;
+    }
+
+
+    .staminaArea {
+
+        width: 250px;
+    }
+
+
+    .controls button {
+
+        padding: 10px 12px;
+
+        font-size: 13px;
+    }
+}

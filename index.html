@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>IRON MIKE</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+
+    <!-- ===============================
+         HOME SCREEN
+         =============================== -->
+
+    <div id="homeScreen" class="screen">
+
+        <h1>IRON MIKE</h1>
+
+        <p>Step into the ring.</p>
+
+        <h3>SELECT DIFFICULTY</h3>
+
+
+        <button onclick="startGame('easy')">
+            EASY
+        </button>
+
+
+        <button onclick="startGame('medium')">
+            MEDIUM
+        </button>
+
+
+        <button onclick="startGame('hard')">
+            HARD
+        </button>
+
+
+        <button onclick="startTraining()">
+            TRAINING MODE
+        </button>
+
+    </div>
+
+
+
+    <!-- ===============================
+         GAME SCREEN
+         =============================== -->
+
+    <div id="gameScreen" class="screen hidden">
+
+        <h1>IRON MIKE</h1>
+
+
+        <div id="modeText">
+            MEDIUM MODE
+        </div>
+
+
+        <!-- TOP AREA -->
+
+        <div class="topArea">
+
+
+            <!-- PLAYER -->
+
+            <div class="fighterInfo">
+
+                <h2>PLAYER</h2>
+
+                <div class="healthBar">
+
+                    <div
+                        id="playerHealth"
+                        class="health">
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- TIMER -->
+
+            <div class="timer">
+
+                <span id="timer">
+                    60
+                </span>
+
+            </div>
+
+
+            <!-- OPPONENT -->
+
+            <div class="fighterInfo">
+
+                <h2>OPPONENT</h2>
+
+                <div class="healthBar">
+
+                    <div
+                        id="enemyHealth"
+                        class="health">
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- STAMINA -->
+
+        <div class="staminaArea">
+
+            <span>STAMINA</span>
+
+            <div class="staminaBar">
+
+                <div
+                    id="playerStamina"
+                    class="stamina">
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- COMBO -->
+
+        <div id="combo">
+
+            COMBO: 0
+
+        </div>
+
+
+
+        <!-- FIGHT AREA -->
+
+        <div class="fightArea">
+
+
+            <!-- PLAYER -->
+
+            <div class="boxer playerBoxer">
+
+                <div class="head"></div>
+
+                <div class="body"></div>
+
+                <div class="arm leftArm"></div>
+
+                <div class="arm rightArm"></div>
+
+                <div class="leg leftLeg"></div>
+
+                <div class="leg rightLeg"></div>
+
+            </div>
+
+
+            <!-- VS -->
+
+            <div class="vs">
+
+                VS
+
+            </div>
+
+
+            <!-- ENEMY -->
+
+            <div class="boxer enemyBoxer">
+
+                <div class="head"></div>
+
+                <div class="body"></div>
+
+                <div class="arm leftArm"></div>
+
+                <div class="arm rightArm"></div>
+
+                <div class="leg leftLeg"></div>
+
+                <div class="leg rightLeg"></div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- MESSAGE -->
+
+        <p id="message">
+
+            FIGHT!
+
+        </p>
+
+
+
+        <!-- CONTROLS -->
+
+        <div class="controls">
+
+
+            <button onclick="playerPunch('left')">
+
+                LEFT PUNCH
+
+            </button>
+
+
+            <button onclick="playerPunch('right')">
+
+                RIGHT PUNCH
+
+            </button>
+
+
+            <button onclick="playerBlock()">
+
+                BLOCK
+
+            </button>
+
+        </div>
+
+
+
+        <!-- EXIT -->
+
+        <button
+            class="homeButton"
+            onclick="goHome()">
+
+            EXIT
+
+        </button>
+
+    </div>
+
+
+
+    <!-- ===============================
+         RESULT SCREEN
+         =============================== -->
+
+    <div id="resultScreen" class="screen hidden">
+
+        <h1 id="resultTitle">
+
+            YOU WIN!
+
+        </h1>
+
+
+        <p id="resultMessage"></p>
+
+
+        <button onclick="restartGame()">
+
+            PLAY AGAIN
+
+        </button>
+
+
+        <button onclick="goHome()">
+
+            HOME
+
+        </button>
+
+    </div>
+
+
+
+    <!-- ===============================
+         SOUNDS
+         =============================== -->
+
+    <audio
+        id="punchSound"
+        src="assets/sounds/punch.mp3">
+    </audio>
+
+
+    <audio
+        id="hitSound"
+        src="assets/sounds/hit.mp3">
+    </audio>
+
+
+    <audio
+        id="blockSound"
+        src="assets/sounds/block.mp3">
+    </audio>
+
+
+    <audio
+        id="winSound"
+        src="assets/sounds/win.mp3">
+    </audio>
+
+
+
+    <script src="game.js"></script>
+
+</body>
+
+</html>
+
